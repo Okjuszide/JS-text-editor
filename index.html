@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TextEditor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <button class="toggleEdit" onClick="edit()">
+            <i class="fas fa-edit"></i>
+        </button>
+        <button class="bold" onClick="bold()">
+            <i class="fas fa-bold"></i>
+        </button>
+        <button class="italic" onClick="italic()">
+            <i class="fas fa-italic"></i>
+        </button>
+        <button class="underline" onClick="underline()">
+            <i class="fas fa-underline"></i>
+        </button>
+        <button class="cut" onClick="cut()">
+            <i class="fas fa-cut"></i>
+        </button>
+        <button class="paste" onClick="paste()">
+            <i class="fas fa-paste"></i>
+        </button>
+        <button class="createLink" onClick="createLink()">
+            <i class="fas fa-link"></i>
+        </button>
+        <select id="fontName" onChange="changeFont(this.value)">
+            <option value="Arial" >Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Consolas">Consolas</option>
+        </select>
+    </div>
+    <div id="editor" contenteditable="true" spellcheck="false"></div>
+</body>
+</html>
